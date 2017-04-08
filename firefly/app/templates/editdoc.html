@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>edit doc</title>
+	<link href="/static/css/bootstrap.css" rel='stylesheet' type='text/css' />
+	<link href="/static/css/button.css" rel='stylesheet' type='text/css' />
+	<link href="/static/css/bootstrap-select.min.css" rel='stylesheet' type='text/css' />
+	<link href="/static/css/font-awesome.min.css" rel='stylesheet' type='text/css' />
+	<link rel="shortcut icon" href="/static/favicon.ico"/>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+		}
+
+		html, body{
+			width:100%;
+			height:100%;
+		}
+	</style>
+</head>
+<body>
+	<div class="all">
+		<div class="nav col-md-12" style="background-color: #55c5a8;height: 50px;position: fixed;left: 0;top: 0;">
+			<div class="col-md-1">
+				<a href="/" class="button button-action button-large">back</a>
+			</div>
+			<div class="button-group" id="addSth">
+				<a href="javascript:void(0);" class="button button-action button-large" id="btn_lt">lt</a>
+				<a href="javascript:void(0);" class="button button-action button-large" id="btn_p">p</a>
+				<a href="javascript:void(0);" class="button button-action button-large" id="btn_cpt">cpts</a>
+			</div>
+			<div class="col-md-1" style="float: right;">
+				<a href="javascript:void(0);" class="button button-action button-large" id="btn_save">save</a>
+			</div>
+		</div>
+		<div class="menuAndContant col-md-12" style="background-color: gray;height: calc(100% - 50px);position: fixed;left: 0;top: 50px;padding-left: 0;padding-right: 0;overflow-y: auto;">
+			<div class="content col-md-10" style="width: 800px;overflow: hidden;background-color: white;float: none;display: block;margin-left: auto;margin-right: auto;margin-top:20px;margin-bottom:20px;box-shadow: 0 0 5px white;padding-bottom: 20px;padding-left: 15px;padding-right: 15px;">
+
+			</div>
+		</div>
+	</div>
+
+	<script src="/static/js/jquery-1.11.0.min.js"></script>
+	<script src="/static/js/echarts.js"></script>
+	<script src="/static/js/bootstrap-select.min.js"></script>
+	<script src="/static/js/charttype.js"></script>
+	<script src="/static/js/tem/editdoc.js"></script>
+	<script src="/static/js/tem/api.js"></script>
+	<script type="text/javascript">
+	    $(document).ready(function () {
+	        $("#btn_cpt").click(function () {
+	            addTogWindow();
+	        });
+	        $("#btn_lt").click(function () {
+	            $.editdoc.addLittleTitle();
+	        });
+	        $("#btn_p").click(function () {
+	            $.editdoc.addParagraph();
+	        });
+	        $("#btn_save").click(function () {
+	            $.editdoc.saveDoc();
+	        });
+	    });
+	</script>
+</body>
+</html>
