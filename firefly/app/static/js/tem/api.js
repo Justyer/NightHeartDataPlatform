@@ -10,11 +10,11 @@ function iGetInnerText(str) {
     return resultStr;
 }
 
-function addTogWindow(){ 
+function addTogWindow(){
     $(".dadd").slideToggle("normal");
 }
 
-function createDocAddDialog(){	
+function createDocAddDialog(){
 	var dadd = $('<div></div>')
 				.appendTo('.content-nav')
 				.attr({
@@ -60,7 +60,7 @@ function createDocAddDialog(){
 
 }
 
-function createDataAddDialog(){	
+function createDataAddDialog(){
 	var dadd = $('<div></div>')
 				.appendTo('.content-nav')
 				.attr({
@@ -121,7 +121,7 @@ function createDataAddDialog(){
 
 }
 
-function dataAddDialog(){	
+function dataAddDialog(){
 	var dadd = $('<div></div>')
 				.appendTo('#addSth')
 				.attr({
